@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet"  href="css/main.css">
+    <title>Форма обратной связи</title>
+</head>
+<body>
+    <div class="container">
+        <div class="my-5 mx-auto text-center">
+            <button class="btn btn-dark btn-lg" data-toggle="modal" data-target="#exampleModal">Обратная связь</button>
+        </div>
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="m-header">
+                    <button type="button" class="close btn-light" id="closeForm" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><img alt="close" src="images/54473.svg" width="30" height="30"></span>
+                    </button>
+                </div>
+
+                <div class="modal-body">
+
+                <div>
+                    <form id="contactForm" class="contactForm" action="modules/handler.php" method="post">
+                        <div class="form-group">
+                            <label for="name" class="col-form-label fs-13">Ваше имя*</label>
+                            <input type="text" class="inputForm form-control" id="name" name="name" placeholder="Ваше имя" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone" class="col-form-label fs-13">Ваш номер телефона*</label>
+                            <input type="text" id="phone" name="phone" placeholder="+7 (999) 999-99-99" class="inputForm form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="col-form-label fs-13">Комментарий к заявке</label>
+                            <input type="text" class="inputForm form-control" id="message" name="message" placeholder="Ваш комментарий(необязательно)" >
+                        </div>
+                        <button id="clear" class="btn btn-light" type="reset"><span style="text-decoration: underline">ОЧИСТИТЬ</span></button>
+                        <button id="button" class="btn btn-dark float-right" type="submit">ОТПРАВИТЬ</button>
+                        <div>
+                            <span><p id="result"></p></span>
+                        </div>
+                    </form>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="successModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h5>Сообщение успешно отправлено!</h5>
+                <button class="btn btn-success" type="button" aria-label="Close" data-dismiss="modal">
+                    <i>ЗАКРЫТЬ</i>
+                </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+</html>
